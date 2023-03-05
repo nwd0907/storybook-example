@@ -2,7 +2,7 @@ import Task from "./Task";
 
 export default {
   component: Task,
-  title: "입력하세요",
+  title: "Task",
 };
 
 const Template = (args) => <Task {...args} />;
