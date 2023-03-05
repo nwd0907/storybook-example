@@ -5,7 +5,7 @@ export default {
   title: "입력하세요",
 };
 
-const Template = (args) => () => <Task {...args} />;
+const Template = (args) => <Task {...args} />;
 
 const args = {
   task: {
@@ -15,20 +15,23 @@ const args = {
   },
 };
 
-export const Default = Template({
+export const Default = Template.bind({});
+Default.args = {
   ...args,
-});
+};
 
-export const Pinned = Template({
+export const Pinned = Template.bind({});
+Pinned.args = {
   task: {
     ...args.task,
     state: "TASK_PINNED",
   },
-});
+};
 
-export const Archived = Template({
+export const Archived = Template.bind({});
+Archived.args = {
   task: {
     ...args.task,
     state: "TASK_ARCHIVED",
   },
-});
+};
